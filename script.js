@@ -96,3 +96,42 @@ for (let N = 1; N <= 100; N++) {
         console.log(N);
     }
 }
+
+/*
+Завдання №6:
+
+Написати функцію, яка приймає коефіцієнти квадратного рівняння, вирішує рівняння і виводить на консоль можливі значення Х.
+
+Рівняння вигляду a*x*x + b*x + c = 0 , у якому a, b і c — дійсні числа
+D = B*B-4AC
+*/
+
+
+let A = Number(prompt('type A'));
+let B = Number(prompt('type B'));
+let C = Number(prompt('type C'));
+
+function quadratic(A, B, C) {
+
+    const D = B * B - 4 * A * C;
+
+    switch (true) {
+
+        case D === 0:
+            console.log('X = ' + (-B / 2 * A));
+            break;
+
+
+        case D > 0:
+            console.log('X1= ' + ((-B + Math.sqrt(D)) / 2 * A)  +   ' X2= ' + ((-B - Math.sqrt(D)) / 2 * A));
+            break;
+
+
+        case D < 0:
+            console.log('коренів рівняння нема');
+            break;
+    }
+
+}
+
+quadratic(A, B, C);
