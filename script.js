@@ -68,3 +68,31 @@ if (Q%5===0){
 console.log (Q);
 }
 }
+
+/*
+Завдання №5:
+
+Реалізовати гру FizzBuzz для 100 чисел.
+https://ru.wikipedia.org/wiki/Fizz_buzz:
+Гравець, що починає, вимовляє число "1", і кожен наступний гравець додає до попереднього значення одиницю. Коли число ділиться на 3 воно замінюється на fizz, якщо число ділиться на 5, то вимовляється buzz. Числа, що діляться 3 і 5 одночасно замінюються на fizz buzz. Гравець, що зробив помилку, виключається з гри.
+
+Типова партія у fizz buzz виглядає так:
+
+1, 2, Fizz, 4, Buzz, Fizz, 7, 8, Fizz, Buzz, 11, Fizz, 13, 14, Fizz Buzz, 16, 17, Fizz, 19, Buzz, Fizz, 22, 23, Fizz, Buzz , 26, Fizz, 28, 29, Fizz Buzz, 31, 32, Fizz, 34, Buzz, Fizz, ...
+
+*/
+
+
+let N = 1;
+
+for (let N = 1; N <= 100; N++) {
+    if (N % 3 === 0 && N % 5 === 0) {
+        console.log('FizzBuzz');
+    } else if (N % 3 === 0) {
+        console.log('Fizz');
+    } else if (N % 5 === 0) {
+        console.log('Buzz');
+    } else {
+        console.log(N);
+    }
+}
